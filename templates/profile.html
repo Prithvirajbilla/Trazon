@@ -11,7 +11,7 @@
 							Profile Information
 						</div>
 						<div class="panel-body">
-				            <img class="circle" src="http://lorempixel.com/256/256/people/1" alt="icon" align="middle">
+				            <img class="circle" src="/media/{{image}}" alt="icon" align="middle">
 				            <br><br>				            
 							<div class="list-group">
 							    <div class="list-group-item">
@@ -21,7 +21,23 @@
 							        <div class="row-content">
 							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
 							            <h4 class="list-group-item-heading">Name</h4>
-							            <p class="list-group-item-text">Prithviraj Raj</p>
+							            <p class="list-group-item-text">
+							            	{{ name }}
+							            </p>
+							        </div>
+							    </div>
+							    <div class="list-group-separator"></div>
+
+							    <div class="list-group-item">
+							        <div class="row-action-primary">
+							            <i class="mdi-action-account-circle"></i>
+							        </div>
+							        <div class="row-content">
+							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
+							            <h4 class="list-group-item-heading">Sex</h4>
+							            <p class="list-group-item-text">
+							            	{{ sex }}
+							            </p>
 							        </div>
 							    </div>
 							    <div class="list-group-separator"></div>
@@ -33,7 +49,7 @@
 							        <div class="row-content">
 							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
 							            <h4 class="list-group-item-heading">Rating</h4>
-							            <p class="list-group-item-text">4.5/5.0</p>
+							            <p class="list-group-item-text">{{rating}}/5.0</p>
 							        </div>
 							    </div>
 							    <div class="list-group-separator"></div>
@@ -67,8 +83,8 @@
 							        </div>
 							        <div class="row-content">
 							            <div class="action-secondary"><i class="mdi-material-info"></i></div>
-							            <h4 class="list-group-item-heading">Age</h4>
-							            <p class="list-group-item-text">40.</p>
+							            <h4 class="list-group-item-heading">Date of Birth</h4>
+							            <p class="list-group-item-text">{{dob}}</p>
 							        </div>
 							    </div>
 							    <div class="list-group-separator"></div>
@@ -97,14 +113,7 @@
 						Desctiption
 					</div>
 					<div class="panel-body">
-						Balaji Viswanathan
-						Teacher and a Product Manager.
-						Product Manager at Black Duck - a VC funded startup in Boston. Run a signature business program in my spare time: MBA Bootcamp: Business School on Steroids
-
-						Written a book on contemporary Indian history: From Tryst to Tendulkar. Has a Bachelors in Engineering, MS in Computer Science with a thesis on Intelligent Agents [some of what are now called Internet of Things] and an MBA. Worked at Microsoft Redmond helping build Windows and a few research prototypes. Founded 2 startups that went through top incubators. 
-
-						I have organized my answers into Quora books: My Quora books 
-						Here is a bio: What should everyone know about Balaji Viswanathan?
+						{{ about_me }}
 					</div>
 					</div>
 				</div>
