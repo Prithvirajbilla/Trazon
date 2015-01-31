@@ -24,3 +24,7 @@ def item_view(request):
 def login(request):
 	template = "login.html"
 	return render(request,template)
+
+def profile(request):
+	template = "profile.html"
+	return render(request,template)
