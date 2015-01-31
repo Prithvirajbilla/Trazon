@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_facebook',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -45,6 +46,21 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'django_facebook.context_processors.facebook',
+)
+AUTHENTICATION_BACKENDS = (
+    'django_facebook.auth_backends.FacebookBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 ROOT_URLCONF = 'hackathon.urls'
@@ -91,3 +107,11 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+FACEBOOK_APP_ID = "331093513697854"
+FACEBOOK_APP_SECRET = "45ce7fa446ae31977a482607b007c7ea"
+AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
+AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'
+
+MEDIA_ROOT = BASE_DIR+'/media/'
+
+MEDIA_URL = '/media/'

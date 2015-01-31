@@ -20,3 +20,7 @@ def post_trip(request):
 def item_view(request):
 	template = "item_page.html"
 	return render(request,template)
+
+def login(request):
+	template = "login.html"
+	return render(request,template)
