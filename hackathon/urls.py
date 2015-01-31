@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^items/request$','donor.views.item_request'),
     url(r'^profile$','donor.views.profile'),
     url(r'^post/trip$','donor.views.post_trip'),
-    url(r'^items/1$','donor.views.item_view'),
+    url(r'^items/(\d+)$','donor.views.item_view'),
 	url(r'^facebook/', include('django_facebook.urls')),
 	url(r'^accounts/', include('django_facebook.auth_urls')), #Don't add this line if you use django registration or userena for registration and auth.
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
