@@ -11,7 +11,7 @@
         <a class="navbar-brand" href="#">Company Name</a>
     </div>
     <div class="collapse navbar-collapse">
-        <div class="col-sm-9 col-md-9">
+        <div class="col-sm-6 col-md-6">
             <form class="navbar-form" role="search">
                 <div class="input-group">
                     <input type="text" class="form-control input-lg" placeholder="Search" name="q">
@@ -22,8 +22,25 @@
             </form>
         </div>   
         <ul class="nav navbar-nav pull-right">
+          {% if not request.user.is_authenticated %}
+            <li class="dropdown">
+              <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b><div class="ripple-wrapper"></div></a>
+              <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">Account Settings</a></li>
+                  <li><a href="javascript:void(0)">Trip Summary</a></li>
+                  <li><a href="javascript:void(0)">Sent Items</a></li>
+                  <li><a href="javascript:void(0)">Requested Items</a></li>
+                  <li><a href="javascript:void(0)">Wish List</a></li>
+                  <li class="divider"></li>
+                  <li><a href="javascript:void(0)">Logout</a></li>
+              </ul>
+          </li>
+            <li><a href="#" class="btn btn-info btn-raised" style="padding:10px">Post Request </a></li>
+            <li><a href="#" class="btn btn-warning btn-raised" style="padding:10px">Share Travel</a></li>
+          {% else %}
             <li class="active"><a href="#">Login</a></li>
             <li><a href="#">Signup</a></li>
+          {% endif %}
         </ul>
 
     </div>

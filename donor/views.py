@@ -8,3 +8,7 @@ from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNo
 def home(request):
 	template = "home.html"
 	return render(request,template)
+
+def item_request(request):
+	template = "request.html"
+	return render(request,template)
