@@ -12,3 +12,11 @@ def home(request):
 def item_request(request):
 	template = "request.html"
 	return render(request,template)
+
+def post_trip(request):
+	template = "post_travel.html"
+	return render(request,template)
+
+def item_view(request):
+	template = "item_page.html"
+	return render(request,template)
