@@ -3,7 +3,7 @@ from django.template.loader import get_template
 from django.template import Context
 from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNotFound
 from django_facebook.models import *
-
+from donor.models import *
 # Create your views here.
 
 def home(request):
@@ -18,9 +18,13 @@ def post_trip(request):
 	template = "post_travel.html"
 	return render(request,template)
 
-def item_view(request):
+def item_view(request,uid):
+	item = Item.objects.get(pk=uid)
 	template = "item_page.html"
-	return render(request,template)
+	tp = int(item.item_price) + int(item.reward_amount)
+	iteml = ItemListing.objects.get(item_id=item)
+	uid = iteml.user_id.get_profile();
+	return render(request,template,{"item":item,"tp":tp,"uid":uid})
 
 def login(request):
 	template = "login.html"
