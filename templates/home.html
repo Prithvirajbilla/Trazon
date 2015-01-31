@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load staticfiles %} 
     <div class="intro-header">
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>Shop from any part of the world.</h1>
+                        <h1>Shop anywhere around the world.</h1>
                     </div>
                 </div>
             </div>
@@ -21,7 +22,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                    <img class="img-responsive"  width="488px" height="610px" src="{% static 'img/appletv.jpg' %}">
                     <span class="card-title">Material Cards</span>
                 </div>
                                 
@@ -30,11 +31,22 @@
                     <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="img-responsive" src="{% static 'img/menj.jpg' %}">
+                    <span class="card-title">Material Cards</span>
+                </div>
+                                
+                <div class="card-action">
+                    <h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
+                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                    <img class="img-responsive" width="488px" height="610px" src="{% static 'img/garmin.jpg' %}">
                     <span class="card-title">Material Cards</span>
                 </div>
                                 
@@ -43,11 +55,22 @@
                     <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-image">
+                    <img class="img-responsive" src="{% static 'img/brocade.jpg' %}">
+                    <span class="card-title">Material Cards</span>
+                </div>
+                                
+                <div class="card-action">
+                    <h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
+                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
+                </div>
+            </div>
         </div>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                    <img class="img-responsive"  width="488px" height="610px"src="{% static 'img/gopro.jpg' %}">
                     <span class="card-title">Material Cards</span>
                 </div>
                                 
@@ -56,81 +79,14 @@
                     <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
             <div class="card">
                 <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
+                    <img class="img-responsive" src="{% static 'img/menbag.jpg' %}">
                     <span class="card-title">Material Cards</span>
                 </div>
                                 
                 <div class="card-action">
-                	<h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
-                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
-                </div>
-                                
-                <div class="card-action">
-                	<h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
-                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
-                </div>
-                                
-                <div class="card-action">
-                	<h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
-                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
-                </div>
-                                
-                <div class="card-action">
-                	<h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
-                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
-                </div>
-                                
-                <div class="card-action">
-                	<h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
-                    <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
-                </div>
-                                
-                <div class="card-action">
-                	<h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
+                    <h4 class="text-primary" style="display:inline-block"> $18,000 </h4>
                     <a href="/item/1" target="new_blank" class="btn btn-primary btn-raised pull-right">view item</a>
                 </div>
             </div>
