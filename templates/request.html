@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-lg-offset-3">
+	<div class="well">
+		<h1 style="text-align:center"> Post a Request </h1>
+	<form class="form-horizontal">
+	    <fieldset>
+	        <div class="form-group">
+	            <label for="itemName" class="col-lg-2 control-label">Name of the Item</label>
+	            <div class="col-lg-10">
+	                <input class="form-control" id="itemName" placeholder="Item name" type="text">
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label for="itemPrice" class="col-lg-2 control-label">Item price</label>
+	            <div class="col-lg-10">
+	                <input class="form-control" id="itemPrice" placeholder="Item Price" type="text">
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label for="reward" class="col-lg-2 control-label">Reward Amount</label>
+	            <div class="col-lg-10">
+	                <input class="form-control" id="reward" placeholder="Reward Amount" type="text">
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label for="availableAt" class="col-lg-2 control-label">Available at</label>
+	            <div class="col-lg-10">
+	                <input class="form-control" id="availableAt" placeholder="Place" type="text">
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <label for="textArea" class="col-lg-2 control-label">Item Description</label>
+	            <div class="col-lg-10">
+	                <textarea class="form-control" rows="6" id="textArea"></textarea>
+	                <span class="help-block">Describe the item you want to request.</span>
+	            </div>
+	        </div>
+	        <div class="form-group">
+	            <div class="col-lg-10 col-lg-offset-2">
+	                <button type="submit" class="btn btn-primary">Submit</button>
+	            </div>
+	        </div>
+	    </fieldset>
+	</form>
+	</div>
+	</div>
+	</div>
+
+</div>
+
+{% endblock content %}
