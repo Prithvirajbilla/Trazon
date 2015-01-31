@@ -6,5 +6,5 @@ from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNo
 # Create your views here.
 
 def home(request):
-	template = "base.html"
+	template = "home.html"
 	return render(request,template)
