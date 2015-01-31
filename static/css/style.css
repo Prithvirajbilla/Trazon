@@ -34,9 +34,9 @@ body {
   margin-bottom: 20px;
 }
 .card span.card-title {
-    color: #fff;
     font-size: 24px;
     font-weight: 300;
+    color: white;
     text-transform: uppercase;
 }
 
@@ -54,7 +54,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  color: black;
+  color: white;
   padding: 16px;
 }
 .card .card-content {
@@ -99,7 +99,6 @@ body {
 
 .intro-header {
     margin-top: -50px;
-    padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
     background: url(/static/cover-up.jpg) no-repeat center center;
@@ -110,7 +109,6 @@ body {
 .intro-message {
     position: relative;
     padding-top: 20%;
-    padding-bottom: 20%;
 }
 
 .intro-message > h1 {
