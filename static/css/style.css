@@ -257,3 +257,10 @@ p.copyright {
 .navbar-default.navbar .navbar-form input.form-control::-moz-placeholder {
     color: #565a5c;
 }
+
+.tselling {
+  color: #565a5c;
+  text-align: center;
+}
+
+.navbar-brand { font-family: 'Pacifico', cursive;font-size: 28px; font-weight: 400; }
