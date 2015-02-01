@@ -4,19 +4,22 @@
 <link href="{{ STATIC_URL }}django_facebook/css/facebook.css" type="text/css" rel="stylesheet" media="all" />
 {% include 'django_facebook/_facebook_js.html' %}
 	<div class="container">
-		<div class="well">
-			<h1 style="text-align:center"> Login  here</h1>
+		<div>
 			<div class="row">
-				<div class="col-lg-4 col-lg-offset-4">
+				<style>
+				#id {
+					padding-top: 4cm;
+				}
+				</style>
+				<div id="id" class="col-lg-5 col-lg-offset-5">
 					<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
 					    <input type="hidden" value="/next" name="next" />
 					    <input type="hidden" value="/next" name="register_next" />
 					    <input type="hidden" value="/404" name="error_next" />
 					    {% csrf_token %}
+
 					    <input onclick="F.connect(this.parentNode); return false;" type="image" class="inp-lg" src="{{ STATIC_URL }}django_facebook/images/facebook_login.png" />
 					</form>
-					<hr>
-
 				</div>
 			</div>
 		</div>

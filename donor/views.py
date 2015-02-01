@@ -10,6 +10,10 @@ def home(request):
 	template = "home.html"
 	return render(request,template)
 
+def test(request):
+	template = "test.html"
+	return render(request,template)
+
 def item_request(request):
 	template = "request.html"
 	return render(request,template)
@@ -28,6 +32,10 @@ def item_view(request,uid):
 
 def login(request):
 	template = "login.html"
+	return render(request,template)
+
+def signup(request):
+	template = "signup.html"
 	return render(request,template)
 
 import random
