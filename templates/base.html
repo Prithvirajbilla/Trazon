@@ -12,8 +12,19 @@
     <link href="{% static 'bootstrap-material-design/css/ripples.min.css' %}" rel="stylesheet">
     <link href="{% static 'bootstrap-material-design/css/material-wfont.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-datepicker/css/bootstrap-datetimepicker.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'moment.js' %}"></script>
+    <script src="{% static 'bootstrap-material-design/js/ripples.min.js' %}"></script>
+    <script src="{% static 'bootstrap-material-design/js/material.min.js' %}"></script>
+    <script src="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+    <script src="{% static 'bootstrap-datepicker/js/bootstrap-datetimepicker.min.js' %}"> </script>
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,30 +43,13 @@
     {% endblock content %}
 
     {% include 'footer.html' %}
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="{% static 'jquery.min.js' %}"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'moment.js' %}"></script>
-    <script src="{% static 'bootstrap-material-design/js/ripples.min.js' %}"></script>
-    <script src="{% static 'bootstrap-material-design/js/material.min.js' %}"></script>
-    <script src="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
-    <script src="{% static 'bootstrap-datepicker/js/bootstrap-datetimepicker.min.js' %}"> </script>
         <script type="text/javascript">
             $(function () {
+                $.material.init();
+
                 $('#datetimepicker1').datetimepicker({"format" : "D/MM/YYYY"});
                 $('#datetimepicker2').datetimepicker({"format" : "D/MM/YYYY"});
-            });
-            $.material.init();
-
-            $(document).ready(function() {
-              $(".select").dropdown({"optionClass": "withripple"});
-            });
-
-            $().dropdown({autoinit: "select"});
-
-            $("button").click(function() {
-              $("body").append("<select class=select><option>hey</option><option>hey</option></select>");
+                $(".select").dropdown({"optionClass": "withripple"});
             });
         </script>
     </script>
